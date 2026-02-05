@@ -38,7 +38,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-muted-foreground/20 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Caerus Asset Management. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Munin AI. All rights reserved.</p>
         </div>
       </div>
     </footer>

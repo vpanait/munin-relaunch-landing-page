@@ -49,7 +49,7 @@ export const Header = () => {
             isHeroInView ? "text-white" : "text-foreground"
           }`}
         >
-          CAERUS
+          MUNIN AI
         </motion.a>
         
         <div className="hidden md:flex items-center gap-8">
