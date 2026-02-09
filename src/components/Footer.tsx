@@ -8,12 +8,9 @@ export const Footer = () => {
           </a>
           <span className="text-muted-foreground">·</span>
           <a href="/terms-of-service" className="hover:underline">
-            Terms
+            Terms of Service
           </a>
           <span className="text-muted-foreground">·</span>
-          <a href="#contact" className="hover:underline">
-            Contact
-          </a>
         </div>
         <p className="text-center text-muted-foreground text-sm mt-6">
           &copy; {new Date().getFullYear()} Munin AI. All rights reserved.

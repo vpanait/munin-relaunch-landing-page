@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoWhite from "/logo-white.png";
+import logoBlack from "/logo-black.png";
+import logoPrimary from "/logo-primary.png";
 
 const navLinks = [
   { href: "#how-it-works", label: "How it works" },
@@ -10,7 +13,11 @@ const navLinks = [
   { href: "#faq", label: "FAQ" },
 ];
 
-export const Header = () => {
+interface HeaderProps {
+  hideNavLinks?: boolean;
+}
+
+export const Header = ({ hideNavLinks = false }: HeaderProps) => {
   const [isHeroInView, setIsHeroInView] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -22,7 +29,13 @@ export const Header = () => {
       { threshold: 0, rootMargin: "-50px 0px 0px 0px" }
     );
     const heroSection = document.getElementById("hero-section");
-    if (heroSection) observer.observe(heroSection);
+    if (heroSection) {
+      observer.observe(heroSection);
+    } else {
+      setIsHeroInView(false)
+    }
+
+
     return () => heroSection && observer.unobserve(heroSection);
   }, []);
 
@@ -31,25 +44,24 @@ export const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isHeroInView
-          ? "bg-transparent"
-          : "bg-background/95 backdrop-blur-md border-b border-border"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isHeroInView
+        ? "bg-transparent"
+        : "bg-background/95 backdrop-blur-md border-b border-border"
+        }`}
     >
       <nav className="container mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
         <a
           href="/"
-          className={`text-xl font-serif font-bold tracking-tight transition-colors ${
-            isHeroInView ? "text-white" : "text-primary"
-          }`}
+          className={`flex items-center gap-2 text-xl font-serif font-bold tracking-tight transition-colors ${isHeroInView ? "text-white" : "text-primary"
+            }`}
         >
+          <img src={isHeroInView ? logoWhite : logoPrimary} alt="Munin AI" className="h-auto w-8"  />
           MuninAI
         </a>
 
         {/* Desktop: center nav with dot separators */}
         <div className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link, i) => (
+          {!hideNavLinks && navLinks.map((link, i) => (
             <span key={link.href} className="flex items-center gap-1">
               {i > 0 && (
                 <span
@@ -62,11 +74,10 @@ export const Header = () => {
               )}
               <a
                 href={link.href}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isHeroInView
-                    ? "text-white/85 hover:text-white hover:bg-white/10"
-                    : "text-secondary/85 hover:text-secondary hover:bg-muted"
-                }`}
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${isHeroInView
+                  ? "text-white/85 hover:text-white hover:bg-white/10"
+                  : "text-secondary/85 hover:text-secondary hover:bg-muted"
+                  }`}
               >
                 {link.label}
               </a>
@@ -78,9 +89,8 @@ export const Header = () => {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="#pricing"
-            className={`text-sm font-medium transition-colors ${
-              isHeroInView ? "text-white/85 hover:text-white" : "text-foreground/85 hover:text-foreground"
-            }`}
+            className={`text-sm font-medium transition-colors ${isHeroInView ? "text-white/85 hover:text-white" : "text-foreground/85 hover:text-foreground"
+              }`}
           >
             Sign in
           </a>
@@ -98,11 +108,10 @@ export const Header = () => {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setMobileMenuOpen((o) => !o)}
-            className={`p-2 rounded-lg transition-colors ${
-              isHeroInView && !mobileMenuOpen
-                ? "text-white hover:bg-white/10"
-                : "text-foreground hover:bg-muted"
-            }`}
+            className={`p-2 rounded-lg transition-colors ${isHeroInView && !mobileMenuOpen
+              ? "text-white hover:bg-white/10"
+              : "text-foreground hover:bg-muted"
+              }`}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -113,7 +122,7 @@ export const Header = () => {
       {mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
           <div className="container mx-auto px-6 py-4 flex flex-col gap-1">
-            {navLinks.map((link) => (
+            {!hideNavLinks && navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}

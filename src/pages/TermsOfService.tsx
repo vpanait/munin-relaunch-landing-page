@@ -1,159 +1,254 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="container mx-auto px-4 py-16 pt-30 max-w-4xl">
-        <div className="prose prose-lg max-w-none">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-          
-          <p className="text-gray-600 mb-8">
-            <strong>Last updated:</strong> {new Date().toLocaleDateString()}
+    <div className="min-h-screen bg-background">
+      <Header hideNavLinks={true} />
+      <main className="container mx-auto px-6 lg:px-12 py-24 pt-32 max-w-4xl">
+        <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-li:text-muted-foreground prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
+          <p className="text-sm font-semibold text-foreground mb-2">MUNIN</p>
+          <h1 className="text-3xl lg:text-4xl font-serif font-bold text-foreground mb-2">
+            TERMS OF SERVICE
+          </h1>
+          <p className="text-muted-foreground mb-10">
+            Last updated: 07/07/2024
           </p>
 
-          <div className="space-y-8">
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
-              <p className="text-gray-700 leading-relaxed">
-                By accessing and using the services provided by Caerus Vision Hub ("Company," "we," "our," or "us"), 
-                you accept and agree to be bound by the terms and provision of this agreement. If you do not agree 
-                to abide by the above, please do not use this service.
-              </p>
-            </section>
+          <p className="text-muted-foreground mb-6">
+            Please read these Terms of Service (the "Agreement") carefully because they are a binding agreement between you and Financial Freedom Fighters, Inc. d/b/a Munin ("Munin," "we," "us," or "our") and apply to your use of our website at <a href="https://www.muninai.com" target="_blank" rel="noopener noreferrer">https://www.muninai.com</a> (the "Website") and all of its sub-domains, the platform at <a href="https://app.muninai.com" target="_blank" rel="noopener noreferrer">https://app.muninai.com</a>, which we also make available through the Website (the "Platform"), and any related services, social media pages and apps (the Website and Platform, together with any related services, social media pages and apps, are collectively referred to as our "Services"). All references to "you" or "your" in this Agreement refer to you and/or the entity on behalf of which you access or view the Website.
+          </p>
+          <p className="text-muted-foreground mb-10">
+            By clicking on an "accept" button, creating an account, or otherwise visiting, accessing and/or using our Services, you automatically agree to this Agreement, you acknowledge our <Link to="/privacy-policy">Privacy Policy</Link>, and you certify that you are at least 18 years of age (or the legal age of majority where you reside if that jurisdiction has an older age of majority) and that you are providing truthful and accurate information about yourself.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Service</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Caerus Vision Hub provides financial advisory services including but not limited to:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Investment portfolio management and advisory services</li>
-                <li>Financial planning and wealth management</li>
-                <li>Retirement planning and consultation</li>
-                <li>Tax planning and optimization strategies</li>
-                <li>Risk assessment and management</li>
-                <li>Educational resources and market insights</li>
-              </ul>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Changes to Agreement</h2>
+          <p className="text-muted-foreground mb-6">
+            We may change, modify, add or remove portions of this Agreement (each, an "Update") at any time and in our sole discretion without prior notice to you and such Updates will be effective immediately. If we make Updates to this Agreement, we will change the "Last Updated" date above. Your continued use of Services will confirm your acceptance of the updated Agreement. We encourage you to frequently review the Agreement to ensure you understand the latest terms and conditions associated with use of the Services. If you do not agree to the updated Agreement, you must discontinue using the Services.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Client Responsibilities</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                As a client, you agree to:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Provide accurate and complete financial information</li>
-                <li>Notify us promptly of any material changes in your financial situation</li>
-                <li>Follow our investment recommendations and strategies</li>
-                <li>Pay all applicable fees and charges in a timely manner</li>
-                <li>Comply with all applicable laws and regulations</li>
-                <li>Maintain confidentiality of account information and passwords</li>
-              </ul>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Modification to Services</h2>
+          <p className="text-muted-foreground mb-6">
+            Munin may, at any time and for any reason, change, update or discontinue Services, or any part thereof, with or without notice. Munin will not be liable to you or to any third party for any modification, suspension or discontinuance of Services as permitted herein. We will give you appropriate advance notice about any major changes, although you understand that we may stop, suspend, or change our Services at any time without prior notice. You may terminate this Agreement at any time by ceasing to use our Services.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Investment Advisory Services</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our investment advisory services are provided on a fiduciary basis, meaning we are obligated to act 
-                in your best interests. However, please note:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Past performance does not guarantee future results</li>
-                <li>All investments carry risk of loss</li>
-                <li>We cannot guarantee specific investment outcomes</li>
-                <li>Market conditions may affect investment performance</li>
-                <li>You should carefully consider your risk tolerance before investing</li>
-              </ul>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Privacy Policy</h2>
+          <p className="text-muted-foreground mb-6">
+            Please refer to our Privacy Policy (the "Privacy Policy") <a href="https://www.muninai.com/privacy-policy" target="_blank" rel="noopener noreferrer">https://www.muninai.com/privacy-policy</a> for information regarding how we collect, use and disclose information about you in connection with your use of our Services, and regarding how others collect, use and disclose information about you. The terms and conditions of our Privacy Policy are incorporated into this Agreement.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Fees and Payment</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our fee structure includes:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Management fees based on assets under management</li>
-                <li>Consultation fees for advisory services</li>
-                <li>Transaction fees for certain investment activities</li>
-                <li>Additional fees for specialized services</li>
-              </ul>
-              <p className="text-gray-700 leading-relaxed mt-4">
-                All fees are disclosed in advance and detailed in your client agreement. Payment terms and methods 
-                will be specified in your individual service agreement.
-              </p>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Eligibility</h2>
+          <p className="text-muted-foreground mb-6">
+            If you are entering into this Agreement on behalf of a company, organization or other legal entity, you represent that you have the authority to bind such entity and its affiliates, in which case the terms "you" or "your" shall also refer to such entity and its affiliates. You further agree that you assume all responsibility and liability in connection with your use of the Services on behalf of such company, organization or other legal entity, and you shall be solely responsible for all disputes, if any, that arise due to your use of the Services on behalf of such company, organization or other legal entity.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            We screen all persons and entities requesting an account with Munin to verify identity and information provided during the registration process (as described in more detail below). We may, in our sole discretion, refuse to offer Services to any person or entity and change the eligibility criteria for using the Services at any time.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Limitation of Liability</h2>
-              <p className="text-gray-700 leading-relaxed">
-                To the maximum extent permitted by law, Caerus Vision Hub shall not be liable for any indirect, 
-                incidental, special, consequential, or punitive damages, including without limitation, loss of profits, 
-                data, use, goodwill, or other intangible losses, resulting from your use of our services.
-              </p>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Terms of Access and Use</h2>
+          <p className="text-muted-foreground mb-6">
+            Subject to your compliance with this Agreement and all applicable laws, Munin grants you a limited, nonexclusive, non-transferable and revocable license to access and use the Website, Platform, and other Services (as applicable), together with Munin Content, for personal and non-commercial purposes in accordance with the terms and conditions of this Agreement and any separate written agreement with Munin providing for additional terms and conditions applicable to your relationship with Munin and use of products and services offered by Munin (the "Additional Terms"), including, but not limited to, our Privacy Policy, which are collectively integrated by reference into this Agreement. In the event of a conflict between the terms of this Agreement and any Additional Terms, the Additional Terms will control.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Disclaimers</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our services are provided "as is" and "as available" without warranties of any kind. We disclaim 
-                all warranties, express or implied, including but not limited to:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Warranties of merchantability and fitness for a particular purpose</li>
-                <li>Warranties regarding the accuracy, reliability, or completeness of information</li>
-                <li>Warranties that our services will be uninterrupted or error-free</li>
-                <li>Warranties regarding the security of our systems</li>
-              </ul>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Registration and Accounts</h2>
+          <p className="text-muted-foreground mb-6">
+            You must register for an account in order to access the Platform. The Platform is available only to users who have registered for an account, completed all registration requirements (including a phone interview with us, if requested), and have been granted an account by Munin. You agree to accurately maintain and update any information about yourself that you have provided to Munin. If you do not keep such information current, or fail to submit truthful, accurate and complete information, or we have reasonable grounds to suspect as much, we have the right to suspend or terminate your account and your use of the Services.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            You also agree to immediately notify Munin of any unauthorized use of your account, log-in credentials, or any other breach of security that you become aware of involving or relating to the Services by contacting Munin at hello@muninai.com.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            You will be required to provide the registration information described in our Privacy Policy in order to create an account. You agree to keep confidential your log-in credentials for the Services and to exit from your user account at the end of each session. You may not use anyone else's account at any time and you may not allow others to use your account to access the Services.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Confidentiality</h2>
-              <p className="text-gray-700 leading-relaxed">
-                We maintain strict confidentiality regarding your personal and financial information. We will not 
-                disclose your information to third parties except as required by law, regulation, or with your 
-                explicit consent. This obligation survives termination of our relationship.
-              </p>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Fees</h2>
+          <p className="text-muted-foreground mb-6">
+            Our Services are provided on a subscription basis. If we offer a free trial period for our Services, you will start incurring subscription fee charges following the conclusion of the free trial period.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Termination</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Either party may terminate the advisory relationship at any time with written notice. Upon termination, 
-                we will provide you with a final account statement and return any remaining funds in accordance with 
-                applicable regulations and your instructions.
-              </p>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Linking User Systems; Provided Data</h2>
+          <p className="text-muted-foreground mb-6">
+            You may link your business systems and tools such as your CRM, trading accounts and other technology solutions ("User Systems") to your Munin account in order to authorize and enable the Services to retrieve certain materials, information and data, including but not limited to client communications, client information and client documents ("Provided Data") from banks, financial institutions and other service providers that maintain Provided Data (the "Data Sources"). For clarity, you may also provide us information about your clients (including the Personal Information of your clients) directly by email, online forms, or other methods, which information shall be deemed Provided Data. We will use Provided Data in accordance with our Privacy Policy.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            By using the Services, (i) you grant Munin and our service providers the right, power and authority to access your User Systems and to collect, transmit, store and process Provided Data, (ii) you grant Munin a royalty-free, sublicenseable, worldwide right and license to use the Provided Data (a) as necessary for Munin's performance of the Services and exercise of Munin's rights under this Agreement; (b) as required by applicable law; and (c) on a de-identified basis solely in connection with development, support, and improvement of the Services, and (iii) you agree to Provided Data being collected, transferred, stored, and processed by Munin and our service providers in accordance with this Agreement and our Privacy Policy. You expressly authorize Data Sources selected by you to disclose Provided Data and other necessary information to us. You represent and warrant that (A) you have the right to provide the Provided Data to Munin hereunder for our use as contemplated by this Agreement, (B) you have complied with all applicable laws and obligations to third parties in collecting, using, storing and delivering the Provided Data, and (C) you have obtained all permissions necessary to (1) use and access the Services and any other of Munin's tools related to the capture and processing of information, including but not limited to the personal and financial information of your clients, and (2) allow Munin to process such information in conformance with this Agreement.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Regulatory Compliance</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Our services are provided in compliance with applicable federal and state securities laws and regulations. 
-                We are registered investment advisors subject to oversight by the Securities and Exchange Commission 
-                and/or state regulatory authorities.
-              </p>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Guidelines for Provided Data</h2>
+          <p className="text-muted-foreground mb-4">
+            You shall abide by the following guidelines with respect to all Provided Data uploaded, transmitted and/or otherwise provided to Munin (our "Provided Data Guidelines"). Provided Data must not:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
+            <li>Contain any material which is false, misleading, defamatory, obscene, indecent, abusive, offensive, threatening, harassing, hateful, inflammatory, an invasion of privacy, or is otherwise objectionable;</li>
+            <li>Contain any information or content that we deem to be denigrating or offensive to any individual or group on the basis of religion, gender, sexual orientation, race, ethnicity, age, or disability, or to be otherwise objectionable;</li>
+            <li>Exploit, harm or attempt to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise;</li>
+            <li>Create a risk of harm, loss, physical or mental injury, emotional distress, death, disability, disfigurement, or physical or mental illness to you or to any other person; or</li>
+            <li>Create a risk of any loss or damage to property.</li>
+          </ul>
+          <p className="text-muted-foreground mb-6">
+            You will not upload any Provided Data that (i) includes trade secrets or third-party intellectual property unless you have permission or a valid license from the owner to use it in the specific manner that you used it, (ii) infringes any intellectual property, privacy or publicity right of another, (iii) violates the legal rights (including the rights of publicity and privacy) of others or contain any material that could give rise to any civil or criminal liability under applicable laws or regulations or that otherwise may be in conflict with this Agreement and our Privacy Policy.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            Any use of the Services in violation of Provided Data Guidelines is prohibited and may result in our suspension or termination of your right to use the Services, and may possibly expose you to legal action and damages.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Governing Law</h2>
-              <p className="text-gray-700 leading-relaxed">
-                These terms shall be governed by and construed in accordance with the laws of [Your State/Jurisdiction], 
-                without regard to its conflict of law provisions. Any disputes arising from these terms shall be 
-                resolved in the courts of [Your State/Jurisdiction].
-              </p>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Conduct Guidelines</h2>
+          <p className="text-muted-foreground mb-4">
+            The rights granted to you under this Agreement are subject to the following conduct guidelines concerning the Services:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
+            <li>You will not copy, reproduce, distribute, transmit, republish, post, publicly perform or publicly display the Services, or any information or content made available on or through the Services without Munin's prior written consent;</li>
+            <li>You will not modify, translate, adapt, merge, make derivative works of, disassemble, decompile, frame, reverse compile or reverse engineer any part of the Services;</li>
+            <li>You will not access or use the Services to build a similar or competitive service or application;</li>
+            <li>You will not remove or destroy any copyright notices or other proprietary markings contained on or in any portion of the Services;</li>
+            <li>You will not use any scraping, data mining, robots or similar data gathering or extraction methods on the Services, and you will not collect or harvest any personally identifiable information;</li>
+            <li>You will not create or compile, directly or indirectly, any collection, compilation, database, or directory from the Services;</li>
+            <li>You will not disrupt the operation of the Services in any manner or impose an unreasonable or disproportionately large load on our infrastructure, for example by using methods such as denial of service attacks, flooding and spamming;</li>
+            <li>You will not transmit any "junk mail", "chain letter" or "spam" or any other similar solicitation;</li>
+            <li>You will not attempt to interfere with, compromise the system integrity or security, or decipher any transmissions to or from the servers running the Services;</li>
+            <li>You will not probe, scan or test the vulnerability of our system or network or attempt to breach security or authentication measures;</li>
+            <li>You will not upload invalid data, viruses, worms, keyloggers, spyware, Trojan horses, time bombs, malicious or harmful code, or other software agents through the Services;</li>
+            <li>You will not use the Services other than for their intended purposes; and</li>
+            <li>You will not access or use the Services in an unlawful way or for an unlawful or illegitimate purpose.</li>
+          </ul>
+          <p className="text-muted-foreground mb-6">
+            You are solely responsible for complying with all laws, rules and regulations applicable to you when you use the Services. You agree to comply with the above conduct and usage requirements ("Conduct Guidelines") and agree not to assist or permit any person to engage in any conduct that does not comply with the Conduct Guidelines. Any use of the Services in violation of these Conduct Guidelines is prohibited and may result in our suspension or termination of your right to use the Services, and may possibly expose you to legal action and damages.
+          </p>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Changes to Terms</h2>
-              <p className="text-gray-700 leading-relaxed">
-                We reserve the right to modify these terms at any time. We will notify you of any material changes 
-                and post the updated terms on our website. Your continued use of our services after such changes 
-                constitutes acceptance of the new terms.
-              </p>
-            </section>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Munin Content</h2>
+          <p className="text-muted-foreground mb-6">
+            Except for your Provided Data and Third Party Content (defined below), all information and materials contained on or within the Services, including, but not limited to, text, graphics, HTML, look and feel, images, illustrations, designs, photographs, audio, video, white papers, press releases, names, product names or descriptions, icons, typefaces, software (both source and object code), format, queries, algorithms and written and other materials and information (collectively, "Munin Content"), as well as their selection and arrangement, and all intellectual property and other rights relating to Munin Content, as between you and Munin, are solely and exclusively owned by Munin. You will not delete or alter any copyright, trademark or other proprietary rights notices from Munin Content.
+          </p>
 
-          </div>
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Munin AI Assistant & Admin Personnel</h2>
+          <p className="text-muted-foreground mb-6">
+            Munin makes available through the Services an AI-powered assistant (the "AI Assistant") and/or a live administrative assistants and paraplanners, depending on the service plan, engaged by Munin ("Admin Personnel") to answer your questions and assist you and your business use the Services and deliver support and services to your clients.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            The responses to your questions and commands provided by the AI Assistant and Admin Personnel are Munin Content and all intellectual property and other rights relating to the AI Assistant and Admin Personnel are solely and exclusively owned by Munin, except for proprietary information about you and your business, which is owned exclusively by you. The AI Assistant is designed, and our Admin Personnel are trained, to be responsive to your questions and sensitive to information you provide to the AI Assistant, your Provided Data, and to other information available to Munin. Your interactions with our AI Assistant and Admin Personnel may be recorded and shared with our service providers that support our AI Assistant or for other business purposes.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            The AI Assistant and our Admin Personnel do not intend, and cannot, recommend the purchase or sale of specific securities or investment assets. While the AI Assistant and our Admin Personnel may offer informational or educational information, they will not discern what investment choices would be suitable for any individual's financial situation. Responses and information from the AI Assistant and our Admin Personnel are general in nature and should not be considered investment, legal, or tax advice.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Third Party Content</h2>
+          <p className="text-muted-foreground mb-6">
+            The Services may contain proprietary information and materials licensed or provided to Munin by third parties in connection with Munin's provision of the Services and/or other business purposes (collectively, "Third Party Content"). Third Party Content is the copyrighted work of its owner, who expressly retains all right, title and interest in and to the Third Party Content, including, without limitation, all intellectual property rights therein and thereto.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            All statements and/or opinions expressed in the Third Party Content are solely the opinions and the responsibility of the person or entity providing those materials. These materials do not necessarily reflect the opinion of Munin. We are not responsible, or liable to you or any third party, for the content or accuracy of any materials provided by any third parties.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">No Reliance</h2>
+          <p className="text-muted-foreground mb-6">
+            Any reliance you place on the Services, Provided Data, Munin Content and/or Third Party Content is strictly at your own risk. We disclaim all liability and responsibility arising from any reliance placed on such materials by you or by anyone who may be informed of or exposed to such materials. MUNIN DOES NOT INTEND TO PROVIDE YOU WITH ANY LEGAL, TAX, OR FINANCIAL ADVICE THROUGH THE SERVICES.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Disclaimers</h2>
+          <p className="text-muted-foreground mb-6">
+            <strong className="text-foreground">MUNIN</strong> MAKES NO REPRESENTATIONS, WARRANTIES OR GUARANTEES, EXPRESS OR IMPLIED, REGARDING THE ACCURACY, ADEQUACY, TIMELINESS, RELIABILITY, COMPLETENESS, OR USEFULNESS OF ANY OF THE INFORMATION IN MUNIN CONTENT OR THE SERVICES, AND EXPRESSLY DISCLAIMS ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE. MUNIN MAKES NO REPRESENTATION, WARRANTY, OR GUARANTEE THAT THE MUNIN CONTENT OR THE SERVICES ARE FREE OF VIRUSES, BUGS, DEFECTS, ERRORS, OR OTHER HARMFUL CODE, OR PROGRAMS INTENDED TO INTERCEPT OR ACQUIRE DATA.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            YOU ACKNOWLEDGE AND UNDERSTAND THAT PROVIDED DATA AVAILABLE TO YOU THROUGH THE SERVICES WILL BE THE MOST RECENT DATA WE HAVE AVAILABLE FROM DATA SOURCES, AND THAT THIS INFORMATION MAY NOT REFLECT PENDING TRANSACTIONS AND OTHER RECENT ACTIVITY. WE MAKE OR GIVE NO REPRESENTATION OR WARRANTY AS TO THE ACCURACY, COMPLETENESS, CURRENCY, CORRECTNESS, RELIABILITY, INTEGRITY, QUALITY, OR FITNESS FOR PURPOSE OF ANY OF THE PROVIDED DATA MADE AVAILABLE THROUGH THE SERVICES AND, TO THE FULLEST EXTENT PERMITTED BY LAW, ALL IMPLIED WARRANTIES, CONDITIONS OR OTHER TERMS OF ANY KIND ARE HEREBY EXCLUDED AND WE ACCEPT NO LIABILITY FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF YOU OR ANYONE ELSE RELYING ON PROVIDED DATA MADE AVAILABLE THROUGH THE SERVICES.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            Please note, the ability to exclude warranties varies in different jurisdictions. To the extent that a jurisdiction places limits on the ability for a party to exclude warranties, these exclusions exist to the extent permitted by law. Because of this jurisdictional variance, some of the above exclusions may not apply to you.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Social Media</h2>
+          <p className="text-muted-foreground mb-6">
+            When we make available certain social media features through LinkedIn, X, or other social media sites, you may take such actions as are enabled by those features. Please be aware that activities on our social media sites, or facilitated by or through our social media sites, are subject to the terms and conditions of the applicable social media site(s). Any information or content provided to social media sites may be processed and used by the applicable social media sites in accordance with their policies and any agreements with Munin.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Links to Other Sites</h2>
+          <p className="text-muted-foreground mb-6">
+            Our Services may contain links to other websites. The fact that we link to a website is not an endorsement, authorization or representation of our affiliation with that third party. We do not exercise control over third party websites. These other websites may place their own cookies or other files on your computer, collect data, or solicit personal information from you. Other sites follow different rules regarding the use or disclosure of the personal information you submit to them. We encourage you to read the privacy policies and terms of use for the other websites you visit.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Ownership</h2>
+          <p className="text-muted-foreground mb-6">
+            Munin and/or its licensors own all right, title and interest, including all related intellectual property rights, in and to the Website, Platform, any other Services we make available to you, Munin Content, and Third Party Content. This Agreement is not a sale and does not convey to you any rights of ownership in or related to the Website, Platform, any other Services we make available to you, Munin Content and/or Third Party Content. Munin reserves all rights not expressly granted in this Agreement.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            All trademarks, service marks, logos, slogans and taglines displayed on or through the Services are the property of Munin and its licensors or their respective owners and nothing contained herein should be construed as granting any license or right to use any trademarks, service marks, logos, slogans or taglines displayed on or through the Services without the express written permission of Munin, or such third-party that may own the trademark, service mark, logo, slogan or tagline.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Your Feedback</h2>
+          <p className="text-muted-foreground mb-6">
+            We welcome feedback, comments and suggestions for improvements to the Services ("Feedback"). We may ask for your Feedback in connection with your use of the Services, and you can always submit Feedback by emailing us at hello@muninai.com.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            You grant us a nonexclusive, irrevocable, worldwide, royalty-free, fully paid up right and license to use any Feedback provided by you to us with respect to the Services, and we can use, disclose, reproduce, license and otherwise distribute and exploit Feedback in any manner without obligation or restriction of any kind on account of intellectual property rights or otherwise. Munin will treat any Feedback you provide to us as non-confidential and non-proprietary.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Consent to Electronic Notice</h2>
+          <p className="text-muted-foreground mb-6">
+            If you provide your email address to Munin through the Website or Platform, or by e-mailing Munin directly, you agree that Munin may communicate with you electronically regarding administrative, security and other issues relating to your use of the Services. You agree that any notices, agreements, disclosures or other communications that Munin sends to you electronically will satisfy any legal communication requirements, including that such communications be in writing. The foregoing does not affect your statutory rights.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Limitation of Liability</h2>
+          <p className="text-muted-foreground mb-6">
+            IN NO EVENT SHALL MUNIN OR ITS AFFILIATES, OR ITS OR THEIR OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS, LICENSORS OR SUPPLIERS, BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING LOST PROFITS, LOSS OF GOODWILL, BUSINESS INTERRUPTION, LOSS OF PROGRAMS OR OTHER DATA ON YOUR COMPUTER OR DEVICE OR OTHERWISE, OR SIMILAR DAMAGES) RESULTING FROM OR RELATING TO THIS AGREEMENT, INCLUDING WITHOUT LIMITATION (I) YOUR USE OR INABILITY TO USE THE SERVICES, OR ERRORS, MISTAKES, OR INACCURACIES IN MUNIN CONTENT OR THIRD PARTY CONTENT INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH THE SERVICES, (II) ANY PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM THE SERVICES, (III) ANY INFRINGEMENT BY THE SERVICES OF THE INTELLECTUAL PROPERTY RIGHTS OR OTHER RIGHTS OF THIRD PARTIES; (IV) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE, WHICH MAY BE TRANSMITTED TO OR THROUGH THE SERVICES, (V) ANY ERRORS OR OMISSIONS IN THE SERVICES, WHETHER SUCH DAMAGES ARE BASED ON WARRANTY, CONTRACT, TORT, OR ANY OTHER LEGAL THEORY, AND WHETHER OR NOT MUNIN IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THE FOREGOING LIMITATION OF LIABILITY SHALL APPLY TO THE FULLEST EXTENT PERMITTED BY LAW IN THE APPLICABLE JURISDICTION.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            <strong className="text-foreground">YOU AGREE THAT YOUR USE OF THE SERVICES IS ON AN "AS IS" AND "AS AVAILABLE" BASIS AND AT YOUR SOLE RISK</strong>, AND YOU AGREE THAT WE WILL NOT BE LIABLE TO YOU OR TO ANY THIRD-PARTY FOR ANY USE, INABILITY TO USE, MODIFICATION, SUSPENSION, OR WITHDRAWAL OF THE SERVICES, OR ANY FEATURES, PARTS, OR CONTENT OF THE SERVICES.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">General Release</h2>
+          <p className="text-muted-foreground mb-6">
+            You are solely responsible for all claims, injuries (including death), illnesses, damages, liabilities, and costs ("Liabilities") suffered by you or any third party as a result of your use of the Services. To the maximum extent permitted by applicable law, you hereby release the Munin Parties (as defined below) from any and all responsibility and liability for the foregoing.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            YOU HEREBY WAIVE THE PROVISIONS OF ANY STATE OR LOCAL LAW LIMITING OR PROHIBITING A GENERAL RELEASE. IF YOU ARE A CALIFORNIA RESIDENT, YOU ACKNOWLEDGE AND HEREBY EXPRESSLY WAIVE CALIFORNIA CIVIL CODE SECTION 1542, WHICH STATES: "A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR OR RELEASING PARTY DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE, AND THAT, IF KNOWN BY HIM OR HER, WOULD HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR OR RELEASED PARTY." You hereby expressly waive and relinquish all rights and benefits under that section and any law of any jurisdiction of similar effect with respect to the release of any unknown or unsuspected claims you may have against the Munin Parties pertaining to the subject matter of this section.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Indemnification By You</h2>
+          <p className="text-muted-foreground mb-6">
+            Without limiting the generality or effecting other provisions of this Agreement, as a condition of accessing or using the Services, you agree, at your expense, to indemnify and hold harmless Munin and its affiliates, licensors and suppliers, and our and their officers, directors, employees and agents ("Munin Parties"), from and against any and all losses, costs, damages, liabilities and expenses (including without limitation attorneys' fees) in relation to or arising from (i) your use or inability to use the Services, (ii) your Provided Data, (iii) your failure to comply with any applicable laws and regulations (including any privacy laws), (iv) your violation of any third party right, including without limitation any copyright, property or privacy right, or (v) your breach of any obligations set forth in this Agreement. You shall not settle any such claim without the written consent of the applicable indemnified party.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            For any third-party claim covered under this indemnification provision, we will notify you upon becoming aware of the claim, and you will also defend such claim at your expense if instructed by us to do so. If we or our partners or licensors are obligated to respond to a third-party subpoena or other compulsory legal order or process, you will also reimburse us for reasonable attorneys' fees, as well as employees' and contractors' time and materials spent responding to the third-party subpoena or other compulsory legal order or process at the applicable then-current hourly rates.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Term, Suspension and Termination</h2>
+          <p className="text-muted-foreground mb-6">
+            This Agreement will remain in full force and effect while you use the Services. We reserve the right (but have no obligation) to investigate and/or take appropriate action against you in our sole discretion if you violate this Agreement or otherwise create liability for us or any other person. Such actions could include suspending or terminating your rights with respect to the Services, with or without notice. If your rights with respect to the Services are suspended or terminated, you agree to make no further use of the Services as directed by Munin for the duration of the suspension or indefinitely following termination.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">ARBITRATION CLAUSE & CLASS ACTION WAIVER – APPLICABLE TO THE FULL EXTENT PERMITTED BY LAW</h2>
+          <p className="text-muted-foreground mb-6">
+            Any dispute, claim or controversy arising out of or relating to this Agreement or the breach, termination, enforcement, interpretation or validity thereof, including the determination of the scope or applicability of this agreement to arbitrate, shall be determined by arbitration in Austin, Texas, United States of America, before one arbitrator. The language to be used in the arbitral proceedings will be English. If the dispute, claim or controversy exceeds $250,000, the arbitration shall be administered by JAMS pursuant to its Comprehensive Arbitration Rules and Procedures (the "Rules"), and if not, the arbitration shall be administered by JAMS pursuant to the Rules and in accordance with the Expedited Procedures or similar process set forth in the Rules. Judgment on the award may be entered in any court having jurisdiction. This clause shall not preclude parties from seeking provisional remedies in aid of arbitration from a court of appropriate jurisdiction.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            In any arbitration arising out of or related to this Agreement, the arbitrator shall award to the prevailing party, if any, the costs and attorneys' fees reasonably incurred by the prevailing party in connection with the arbitration. If the arbitrator determines a party to be the prevailing party under circumstances where the prevailing party won on some but not all of the claims and counterclaims, the arbitrator may award the prevailing party an appropriate percentage of the costs and attorneys' fees reasonably incurred by the prevailing party in connection with the arbitration.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            YOU AND MUNIN AGREE THAT EACH OF US MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. Further, if the parties' dispute is resolved through arbitration, the arbitrator may not consolidate another person's claims with your claims and may not otherwise preside over any form of a representative or class proceeding.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            YOU AND MUNIN EACH HEREBY WAIVE THE RIGHT TO A TRIAL BY JURY FOR DISPUTES ARISING OUT OF OR RELATED TO THIS AGREEMENT, AND THIS WAIVER APPLIES REGARDLESS OF THE TYPE OF DISPUTE, WHETHER PROCEEDING UNDER CLAIMS OF CONTRACT OR TORT (INCLUDING WITHOUT LIMITATION NEGLIGENCE) OR ANY OTHER THEORY.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Force Majeure</h2>
+          <p className="text-muted-foreground mb-6">
+            You agree that Munin is not responsible to you for anything that we may otherwise be responsible for, if it is the result of events beyond our control, including, but not limited to, acts of God, war, insurrection, riots, terrorism, crime, pandemics and epidemics, labor shortages (including lawful and unlawful strikes), embargoes, postal disruption, communication disruption, failure or shortage of infrastructure, shortage of materials, or any other event beyond our control.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Governing Law and Venue</h2>
+          <p className="text-muted-foreground mb-6">
+            This Agreement shall be governed by the laws of the State of Delaware, United States of America, without regard to its rules on conflicts or choice of law. The United Nations Convention on Contracts for the International Sale of Goods shall not apply to this Agreement.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">General Terms</h2>
+          <p className="text-muted-foreground mb-6">
+            This Agreement, together with the Privacy Policy, constitute the sole agreements between you and Munin for your use and the provision of the Services, and the subject matter hereof. The section titles in this Agreement are for convenience only and have no legal or contractual effect. Should any provision of this Agreement be held invalid or unenforceable, such provision will be modified to the extent necessary to render it enforceable without losing its intent or severed from this Agreement if no such modification is possible, and other provisions of this Agreement will remain in full force and effect. A waiver by either party of any term or condition of this Agreement or any breach thereof, in any one instance, will not waive such term or condition or any subsequent breach thereof. This Agreement and any rights and licenses granted hereunder, may not be transferred, delegated or assigned by you, but may be assigned, delegated or transferred by Munin without restriction. Any attempted assignment, subcontract, delegation or transfer by you in violation of the foregoing will be null and void. This Agreement shall be binding upon and inure to the benefit of each of the parties and the parties' respective successors and permitted assigns. Certain of our licensors and suppliers may be third-party beneficiaries of this Agreement and have the right to enforce this Agreement against you.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-foreground mt-10 mb-4">Contact Information</h2>
+          <p className="text-muted-foreground mb-6">
+            If you have any questions about the Services or this Agreement, please contact us at hello@muninai.com.
+          </p>
         </div>
       </main>
       <Footer />
