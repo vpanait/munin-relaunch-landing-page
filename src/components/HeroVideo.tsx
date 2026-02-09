@@ -35,8 +35,8 @@ export const HeroVideo = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60" />
       </div>
 
-      <div className="absolute inset-0 z-10 flex items-end justify-start p-6 lg:p-12 pb-24 lg:pb-28">
-        <div className="max-w-2xl lg:max-w-3xl">
+      <div className="absolute inset-0 z-10 flex items-end justify-start px-6 lg:px-12 py-16 lg:py-16">
+        <div className="max-w-2xl lg:max-w-3xl container mx-auto">
           <motion.div
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
