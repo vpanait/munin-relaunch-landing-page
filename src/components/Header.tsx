@@ -49,7 +49,7 @@ export const Header = ({ hideNavLinks = false }: HeaderProps) => {
         : "bg-background/95 backdrop-blur-md border-b border-border"
         }`}
     >
-      <nav className="container mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
+      <nav className="max-w-5xl mx-auto h-16 flex items-center justify-between">
         <a
           href="/"
           className={`flex items-center gap-2 text-xl font-serif font-bold tracking-tight transition-colors ${isHeroInView ? "text-white" : "text-primary"
