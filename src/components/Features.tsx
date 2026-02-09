@@ -44,7 +44,7 @@ export const Features = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}

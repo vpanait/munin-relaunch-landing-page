@@ -43,7 +43,7 @@ export const HowItWorks = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-10 lg:gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-10 lg:gap-12 max-w-6xl mx-auto">
           {steps.map((item, index) => (
             <motion.div
               key={item.title}

@@ -4,7 +4,7 @@ export const Understanding = () => {
   return (
     <section id="understanding" className="relative py-20 lg:py-28 bg-muted/40">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start max-w-6xl mx-auto">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}

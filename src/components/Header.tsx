@@ -49,72 +49,74 @@ export const Header = ({ hideNavLinks = false }: HeaderProps) => {
         : "bg-background/95 backdrop-blur-md border-b border-border"
         }`}
     >
-      <nav className="max-w-5xl mx-auto h-16 flex items-center justify-between">
-        <a
-          href="/"
-          className={`flex items-center gap-2 text-xl font-serif font-bold tracking-tight transition-colors ${isHeroInView ? "text-white" : "text-primary"
-            }`}
-        >
-          <img src={isHeroInView ? logoWhite : logoPrimary} alt="Munin AI" className="h-auto w-8"  />
-          MuninAI
-        </a>
-
-        {/* Desktop: center nav with dot separators */}
-        <div className="hidden lg:flex items-center gap-1">
-          {!hideNavLinks && navLinks.map((link, i) => (
-            <span key={link.href} className="flex items-center gap-1">
-              {i > 0 && (
-                <span
-                  className={
-                    isHeroInView ? "text-white/50 text-sm" : "text-secondary text-sm"
-                  }
-                >
-                  ·
-                </span>
-              )}
-              <a
-                href={link.href}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${isHeroInView
-                  ? "text-white/85 hover:text-white hover:bg-white/10"
-                  : "text-secondary/85 hover:text-secondary hover:bg-muted"
-                  }`}
-              >
-                {link.label}
-              </a>
-            </span>
-          ))}
-        </div>
-
-        {/* Desktop: right CTAs */}
-        <div className="hidden lg:flex items-center gap-3">
+      <nav className="container mx-auto px-6 lg:px-12 h-16 flex items-center">
+        <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
           <a
-            href="#pricing"
-            className={`text-sm font-medium transition-colors ${isHeroInView ? "text-white/85 hover:text-white" : "text-foreground/85 hover:text-foreground"
+            href="/"
+            className={`flex items-center gap-2 text-xl font-serif font-bold tracking-tight transition-colors ${isHeroInView ? "text-white" : "text-primary"
               }`}
           >
-            Sign in
+            <img src={isHeroInView ? logoWhite : logoPrimary} alt="Munin AI" className="h-auto w-8" />
+            MuninAI
           </a>
-          <Button asChild size="sm" className="rounded-full px-5">
-            <a href="#pricing">Subscribe</a>
-          </Button>
-        </div>
 
-        {/* Mobile menu button */}
-        <div className="flex lg:hidden items-center gap-2">
-          <Button asChild size="sm" className="rounded-full">
-            <a href="#pricing">Subscribe</a>
-          </Button>
-          <button
-            type="button"
-            aria-label="Toggle menu"
-            onClick={() => setMobileMenuOpen((o) => !o)}
-            className={`p-2 rounded-lg transition-colors ${isHeroInView && !mobileMenuOpen
-              ? "text-white hover:bg-white/10"
-              : "text-foreground hover:bg-muted"
-              }`}
-          >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          {/* Desktop: center nav with dot separators */}
+          <div className="hidden lg:flex items-center gap-1">
+            {!hideNavLinks && navLinks.map((link, i) => (
+              <span key={link.href} className="flex items-center gap-1">
+                {i > 0 && (
+                  <span
+                    className={
+                      isHeroInView ? "text-white/50 text-sm" : "text-secondary text-sm"
+                    }
+                  >
+                    ·
+                  </span>
+                )}
+                <a
+                  href={link.href}
+                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${isHeroInView
+                    ? "text-white/85 hover:text-white hover:bg-white/10"
+                    : "text-secondary/85 hover:text-secondary hover:bg-muted"
+                    }`}
+                >
+                  {link.label}
+                </a>
+              </span>
+            ))}
+          </div>
+
+          {/* Desktop: right CTAs */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="#pricing"
+              className={`text-sm font-medium transition-colors ${isHeroInView ? "text-white/85 hover:text-white" : "text-foreground/85 hover:text-foreground"
+                }`}
+            >
+              Sign in
+            </a>
+            <Button asChild size="sm" className="rounded-full px-5">
+              <a href="#pricing">Subscribe</a>
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="flex lg:hidden items-center gap-2">
+            <Button asChild size="sm" className="rounded-full">
+              <a href="#pricing">Subscribe</a>
+            </Button>
+            <button
+              type="button"
+              aria-label="Toggle menu"
+              onClick={() => setMobileMenuOpen((o) => !o)}
+              className={`p-2 rounded-lg transition-colors ${isHeroInView && !mobileMenuOpen
+                ? "text-white hover:bg-white/10"
+                : "text-foreground hover:bg-muted"
+                }`}
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </nav>
 
