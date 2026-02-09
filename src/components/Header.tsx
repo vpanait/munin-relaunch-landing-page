@@ -41,7 +41,7 @@ export const Header = () => {
         <a
           href="/"
           className={`text-xl font-serif font-bold tracking-tight transition-colors ${
-            isHeroInView ? "text-white" : "text-foreground"
+            isHeroInView ? "text-white" : "text-primary"
           }`}
         >
           MuninAI
@@ -54,7 +54,7 @@ export const Header = () => {
               {i > 0 && (
                 <span
                   className={
-                    isHeroInView ? "text-white/50 text-sm" : "text-muted-foreground text-sm"
+                    isHeroInView ? "text-white/50 text-sm" : "text-secondary text-sm"
                   }
                 >
                   ·
@@ -65,7 +65,7 @@ export const Header = () => {
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   isHeroInView
                     ? "text-white/85 hover:text-white hover:bg-white/10"
-                    : "text-foreground/85 hover:text-foreground hover:bg-muted"
+                    : "text-secondary/85 hover:text-secondary hover:bg-muted"
                 }`}
               >
                 {link.label}
@@ -91,7 +91,7 @@ export const Header = () => {
 
         {/* Mobile menu button */}
         <div className="flex lg:hidden items-center gap-2">
-          <Button asChild size="sm" variant="secondary" className="rounded-full">
+          <Button asChild size="sm" className="rounded-full">
             <a href="#pricing">Subscribe</a>
           </Button>
           <button

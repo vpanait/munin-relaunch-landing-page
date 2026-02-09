@@ -59,8 +59,9 @@ export const Pricing = () => {
             Pricing
           </h2>
           <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-            Secure checkout via Stripe. Monthly: cancel anytime (access continues
-            until month ends). Annual: cancel renewal before your plan renews.
+            Secure checkout via Stripe.<br />
+            Monthly: cancel anytime (access continues
+            until month ends).<br /> Annual: cancel renewal before your plan renews.
           </p>
         </motion.div>
 
@@ -72,11 +73,10 @@ export const Pricing = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative rounded-2xl border-2 p-8 flex flex-col ${
-                plan.popular
+              className={`relative rounded-2xl border-2 p-8 flex flex-col ${plan.popular
                   ? "border-primary bg-primary/5 shadow-lg scale-[1.02]"
                   : "border-border bg-card"
-              }`}
+                }`}
             >
               {plan.popular && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
@@ -123,7 +123,7 @@ export const Pricing = () => {
                 variant={plan.popular ? "default" : "outline"}
                 className="w-full rounded-full"
               >
-                <a href={plan.cta === "Contact us" ? "/#contact" : "#pricing"}>
+                <a href={plan.cta === "Contact us" ? "mailto:contact@munin.ai&subject=Munin AI Enterprise Pricing Inquiry" : "#pricing"}>
                   {plan.cta}
                 </a>
               </Button>

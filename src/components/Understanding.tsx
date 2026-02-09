@@ -12,7 +12,7 @@ export const Understanding = () => {
             transition={{ duration: 0.6 }}
             className="space-y-4"
           >
-            <h2 className="text-2xl font-serif font-bold text-foreground">
+            <h2 className="text-2xl font-serif font-bold text-secondary">
               The problem
             </h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -29,7 +29,7 @@ export const Understanding = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-4"
           >
-            <h2 className="text-2xl font-serif font-bold text-foreground">
+            <h2 className="text-2xl font-serif font-bold text-secondary">
               The solution
             </h2>
             <p className="text-muted-foreground leading-relaxed">

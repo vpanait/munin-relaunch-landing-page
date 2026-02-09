@@ -56,9 +56,6 @@ export const HowItWorks = () => {
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-6">
                 <item.icon className="w-6 h-6" />
               </div>
-              <span className="text-sm font-semibold text-primary">
-                {item.step})
-              </span>
               <h3 className="text-xl font-serif font-bold text-foreground mt-1 mb-3">
                 {item.title}
               </h3>
