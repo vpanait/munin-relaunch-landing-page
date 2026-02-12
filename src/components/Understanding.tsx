@@ -12,10 +12,10 @@ export const Understanding = () => {
             transition={{ duration: 0.6 }}
             className="space-y-4"
           >
-            <h2 className="text-2xl font-serif font-bold text-secondary">
+            <h2 className="text-2xl font-serif font-bold text-secondary text-center">
               The problem
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-center text-balance">
               Advisors are busy. Client meetings generate valuable context, decisions, and next steps, but documenting and following up consistently takes time. As a result, outcomes and client communication become inconsistent.
             </p>
           </motion.div>
@@ -26,10 +26,10 @@ export const Understanding = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-4"
           >
-            <h2 className="text-2xl font-serif font-bold text-secondary">
+            <h2 className="text-2xl font-serif font-bold text-secondary text-center">
               The solution
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-center text-balance">
               Munin helps you capture the exact data you care about during calls, keep a client-level history you can search, and automatically produce post-meeting outputs (structured notes, action items, meeting summary, and a follow-up email draft) so you can move the relationship forward, fast.
 
             </p>

@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "How do I get started?",
-    a: "Create an account → (Optional) connect your calendar → run Munin in your next call or upload a past one.",
+    a: "Create an account → (Optional) connect your calendar → Run Munin in your next call or upload a past one.",
   },
 ];
 
