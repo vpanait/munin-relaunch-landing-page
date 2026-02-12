@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
+import { APP_SIGN_UP_URL } from "@/const";
 
 export const HeroVideo = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -60,7 +61,7 @@ export const HeroVideo = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button asChild size="lg" className="rounded-full px-8">
-                    <a href="#pricing">Subscribe</a>
+                    <a href={APP_SIGN_UP_URL} target="_blank">Subscribe</a>
                   </Button>
                   <Button
                     asChild

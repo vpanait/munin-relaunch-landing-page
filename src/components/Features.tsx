@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Mail, LayoutTemplate, MessageCircle } from "lucide-react";
+import { APP_SIGN_UP_URL } from "@/const";
 
 const features = [
   {
     title: "Client-ready outputs",
     description:
-      "Leave every call with: Follow-up email draft, Action items, Meeting summary, Notes + extracted data from your template.",
+      "Leave every call with: Follow-up email draft, Action items, Meeting summary, Notes and extracted data from your template.",
     icon: Mail,
   },
   {
@@ -88,7 +89,7 @@ export const Features = () => {
             so you can watch your structure get completed in real time.
           </p>
           <Button asChild className="rounded-full px-6">
-            <a href="#pricing">Go Professional</a>
+            <a href={APP_SIGN_UP_URL} target="_blank">Go Professional</a>
           </Button>
         </motion.div>
       </div>

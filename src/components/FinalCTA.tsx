@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
+import { CONTACT_EMAIL, APP_SIGN_UP_URL } from "@/const";
 
 export const FinalCTA = () => {
   return (
@@ -15,14 +16,14 @@ export const FinalCTA = () => {
             Ready to cut the admin and tighten your follow-ups?
           </h2>
           <Button asChild size="lg" className="rounded-full px-10 mt-4">
-            <a href="#pricing">Subscribe</a>
+            <a href={APP_SIGN_UP_URL} target="_blank">Subscribe</a>
           </Button>
           <p className="text-sm text-muted-foreground mt-6">
             Choose monthly or annual. Upgrade anytime.
           </p>
           <p className="text-sm text-muted-foreground mt-4">
             For enterprise or support,{" "}
-            <a href="mailto:contact@munin.ai" className="text-primary hover:underline">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline">
               contact us
             </a>
             .

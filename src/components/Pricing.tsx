@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { APP_SIGN_UP_URL, CONTACT_EMAIL } from "@/const";
 
 const plans = [
   {
@@ -74,8 +75,8 @@ export const Pricing = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative rounded-2xl border-2 p-8 flex flex-col ${plan.popular
-                  ? "border-primary bg-primary/5 shadow-lg scale-[1.02]"
-                  : "border-border bg-card"
+                ? "border-primary bg-primary/5 shadow-lg scale-[1.02]"
+                : "border-border bg-card"
                 }`}
             >
               {plan.popular && (
@@ -123,9 +124,15 @@ export const Pricing = () => {
                 variant={plan.popular ? "default" : "outline"}
                 className="w-full rounded-full"
               >
-                <a href={plan.cta === "Contact us" ? "mailto:contact@munin.ai&subject=Munin AI Enterprise Pricing Inquiry" : "#pricing"}>
-                  {plan.cta}
-                </a>
+                {plan.cta === "Contact us" ? (
+                  <a href={`mailto:${CONTACT_EMAIL}&subject=Munin AI Enterprise Pricing Inquiry`} target="_blank">
+                    {plan.cta}
+                  </a>
+                ) : (
+                  <a href={APP_SIGN_UP_URL} target="_blank">
+                    {plan.cta}
+                  </a>
+                )}
               </Button>
             </motion.div>
           ))}

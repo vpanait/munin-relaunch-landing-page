@@ -3,8 +3,10 @@ import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logoWhite from "/logo-white.png";
-import logoBlack from "/logo-black.png";
 import logoPrimary from "/logo-primary.png";
+import logoHero from "/logo_text_white.png";
+import logoRest from "/logo_text_primary_black.png";
+import { APP_LOG_IN_URL, APP_SIGN_UP_URL } from "@/const";
 
 const navLinks = [
   { href: "#how-it-works", label: "How it works" },
@@ -56,8 +58,7 @@ export const Header = ({ hideNavLinks = false }: HeaderProps) => {
             className={`flex items-center gap-2 text-xl font-serif font-bold tracking-tight transition-colors ${isHeroInView ? "text-white" : "text-primary"
               }`}
           >
-            <img src={isHeroInView ? logoWhite : logoPrimary} alt="Munin AI" className="h-auto w-8" />
-            MuninAI
+            <img src={isHeroInView ? logoHero : logoRest} alt="Munin AI" className="h-5 w-auto" />
           </a>
 
           {/* Desktop: center nav with dot separators */}
@@ -89,21 +90,22 @@ export const Header = ({ hideNavLinks = false }: HeaderProps) => {
           {/* Desktop: right CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="#pricing"
+              href={APP_LOG_IN_URL}
+              target="_blank"
               className={`text-sm font-medium transition-colors ${isHeroInView ? "text-white/85 hover:text-white" : "text-foreground/85 hover:text-foreground"
                 }`}
             >
               Sign in
             </a>
             <Button asChild size="sm" className="rounded-full px-5">
-              <a href="#pricing">Subscribe</a>
+              <a href={APP_SIGN_UP_URL} target="_blank">Subscribe</a>
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="flex lg:hidden items-center gap-2">
             <Button asChild size="sm" className="rounded-full">
-              <a href="#pricing">Subscribe</a>
+              <a href={APP_SIGN_UP_URL} target="_blank">Subscribe</a>
             </Button>
             <button
               type="button"

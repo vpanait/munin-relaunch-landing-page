@@ -16,10 +16,7 @@ export const Understanding = () => {
               The problem
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Advisors are busy. Client meetings generate valuable context,
-              decisions, and next steps, but documenting and following up
-              consistently takes time. As a result, outcomes and client
-              communication become inconsistent.
+              Advisors are busy. Client meetings generate valuable context, decisions, and next steps, but documenting and following up consistently takes time. As a result, outcomes and client communication become inconsistent.
             </p>
           </motion.div>
           <motion.div
@@ -33,11 +30,8 @@ export const Understanding = () => {
               The solution
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Munin helps you capture the exact data you care about during
-              calls, keep a client-level history you can search, and
-              automatically produce post-meeting outputs (structured notes,
-              action items, meeting summary, and a follow-up email draft) so you
-              can move the relationship forward, fast.
+              Munin helps you capture the exact data you care about during calls, keep a client-level history you can search, and automatically produce post-meeting outputs (structured notes, action items, meeting summary, and a follow-up email draft) so you can move the relationship forward, fast.
+
             </p>
           </motion.div>
         </div>
