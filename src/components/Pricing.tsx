@@ -6,13 +6,12 @@ import { APP_SIGN_UP_URL, CONTACT_EMAIL } from "@/const";
 const plans = [
   {
     name: "Essentials",
-    tagline: "Land",
+    tagline: null,
     monthly: 39,
     annual: 29,
     popular: false,
     features: [
       "Templates",
-      "Upload past calls (no cap)",
       "Client profile panel + AI chat",
       "Post-meeting outputs",
       "Calendar integrations (Google Calendar + Outlook/Microsoft 365)",
@@ -21,15 +20,16 @@ const plans = [
   },
   {
     name: "Professional",
-    tagline: "Expand",
+    tagline: null,
     monthly: 79,
     annual: 59,
     popular: true,
     features: [
       "Everything in Essentials, plus:",
+      "Upload past calls",
       "Live transcription",
       "Dynamic checklist",
-      "Priority support + onboarding session",
+      "Priority support",
     ],
     cta: "Subscribe",
   },
@@ -95,19 +95,25 @@ export const Pricing = () => {
                   )}
                 </h3>
                 {plan.monthly != null && (
-                  <div className="mt-3 flex items-baseline gap-2 flex-wrap">
-                    <span className="text-2xl font-bold text-foreground">
-                      ${plan.monthly}
-                    </span>
-                    <span className="text-muted-foreground text-sm">
-                      / user / month billed monthly
-                    </span>
-                    <span className="text-foreground font-semibold">
-                      ${plan.annual}
-                    </span>
-                    <span className="text-muted-foreground text-sm">
-                      / user / month billed annually
-                    </span>
+                  <div className="mt-3 flex flex-col items-baseline gap-0 flex-wrap">
+                    <div>
+
+                      <span className="text-2xl font-bold text-foreground">
+                        ${plan.monthly}
+                      </span>
+                      <span className="text-muted-foreground text-sm">
+                        / user / month billed monthly
+                      </span>
+                    </div>
+                    <div>
+
+                      <span className="text-foreground font-semibold">
+                        ${plan.annual}
+                      </span>
+                      <span className="text-muted-foreground text-sm">
+                        / user / month billed annually
+                      </span>
+                    </div>
                   </div>
                 )}
               </div>
