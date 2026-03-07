@@ -7,6 +7,7 @@ import logoPrimary from "/logo-primary.png";
 import logoHero from "/logo_text_white.png";
 import logoRest from "/logo_text_primary_black.png";
 import { APP_LOG_IN_URL, APP_SIGN_UP_URL } from "@/const";
+import { trackClick } from "@/lib/analytics";
 
 const navLinks = [
   { href: "#how-it-works", label: "How it works" },
@@ -92,20 +93,22 @@ export const Header = ({ hideNavLinks = false }: HeaderProps) => {
             <a
               href={APP_LOG_IN_URL}
               target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackClick("Sign in", "header")}
               className={`text-sm font-medium transition-colors ${isHeroInView ? "text-white/85 hover:text-white" : "text-foreground/85 hover:text-foreground"
                 }`}
             >
               Sign in
             </a>
             <Button asChild size="sm" className="rounded-full px-5">
-              <a href={APP_SIGN_UP_URL} target="_blank">Subscribe</a>
+              <a href={APP_SIGN_UP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackClick("Subscribe", "header")}>Subscribe</a>
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="flex lg:hidden items-center gap-2">
             <Button asChild size="sm" className="rounded-full">
-              <a href={APP_SIGN_UP_URL} target="_blank">Subscribe</a>
+              <a href={APP_SIGN_UP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackClick("Subscribe", "header_mobile")}>Subscribe</a>
             </Button>
             <button
               type="button"
@@ -137,9 +140,11 @@ export const Header = ({ hideNavLinks = false }: HeaderProps) => {
               </a>
             ))}
             <a
-              href="#pricing"
+              href={APP_LOG_IN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-3 text-muted-foreground font-medium rounded-lg hover:bg-muted"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => { setMobileMenuOpen(false); trackClick("Sign in", "header_mobile"); }}
             >
               Sign in
             </a>

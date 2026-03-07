@@ -2,7 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { initAnalytics, trackPageView } from "@/lib/analytics";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -11,12 +13,31 @@ import Disclosures from "./pages/Disclosures";
 
 const queryClient = new QueryClient();
 
+function AnalyticsTracker() {
+  const location = useLocation();
+  const initialized = useRef(false);
+
+  useEffect(() => {
+    if (!initialized.current) {
+      initAnalytics();
+      initialized.current = true;
+    }
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location.pathname || "/", document.title);
+  }, [location.pathname]);
+
+  return null;
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AnalyticsTracker />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

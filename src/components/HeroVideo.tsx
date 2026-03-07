@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 import { APP_SIGN_UP_URL } from "@/const";
+import { trackClick } from "@/lib/analytics";
 
 export const HeroVideo = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -61,7 +62,7 @@ export const HeroVideo = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Button asChild size="lg" className="rounded-full px-8">
-                    <a href={APP_SIGN_UP_URL} target="_blank">Subscribe</a>
+                    <a href={APP_SIGN_UP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackClick("Subscribe", "hero")}>Subscribe</a>
                   </Button>
                   <Button
                     asChild
@@ -69,7 +70,7 @@ export const HeroVideo = () => {
                     variant="outline"
                     className="rounded-full px-8 border-white/60 text-white hover:bg-white/10 hover:text-white"
                   >
-                    <a href="#pricing">See pricing</a>
+                    <a href="#pricing" onClick={() => trackClick("See pricing", "hero")}>See pricing</a>
                   </Button>
                 </div>
               </motion.div>

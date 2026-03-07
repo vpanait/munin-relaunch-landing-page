@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { APP_SIGN_UP_URL, CONTACT_EMAIL } from "@/const";
+import { trackClick } from "@/lib/analytics";
 
 const plans = [
   {
@@ -131,11 +132,11 @@ export const Pricing = () => {
                 className="w-full rounded-full"
               >
                 {plan.cta === "Contact us" ? (
-                  <a href={`mailto:${CONTACT_EMAIL}&subject=Munin AI Enterprise Pricing Inquiry`} target="_blank">
+                  <a href={`mailto:${CONTACT_EMAIL}&subject=Munin AI Enterprise Pricing Inquiry`} target="_blank" rel="noopener noreferrer" onClick={() => trackClick("Contact us", `pricing_${plan.name}`)}>
                     {plan.cta}
                   </a>
                 ) : (
-                  <a href={APP_SIGN_UP_URL} target="_blank">
+                  <a href={APP_SIGN_UP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackClick("Subscribe", `pricing_${plan.name}`)}>
                     {plan.cta}
                   </a>
                 )}

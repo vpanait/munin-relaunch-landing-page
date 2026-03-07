@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Mail, LayoutTemplate, MessageCircle } from "lucide-react";
+import { trackClick } from "@/lib/analytics";
 import { APP_SIGN_UP_URL } from "@/const";
 
 const features = [
@@ -89,7 +90,7 @@ export const Features = () => {
             so you can watch your structure get completed in real time.
           </p>
           <Button asChild className="rounded-full px-6">
-            <a href={APP_SIGN_UP_URL} target="_blank">Go Professional</a>
+            <a href={APP_SIGN_UP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackClick("Go Professional", "features")}>Go Professional</a>
           </Button>
         </motion.div>
       </div>
