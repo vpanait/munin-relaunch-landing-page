@@ -29,17 +29,20 @@ export function initAnalytics(): void {
   };
   window.gtag("js", new Date().toISOString());
 
+  const isDev = import.meta.env.DEV;
+  const config: Record<string, unknown> = {
+    anonymize_ip: true,
+    ...(isDev && { debug_mode: true }),
+  };
+
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+  // Config runs after script loads so GA gets a page_view and Realtime shows users
+  script.onload = () => {
+    window.gtag?.("config", id, { ...config, send_page_view: true });
+  };
   document.head.appendChild(script);
-
-  const isDev = import.meta.env.DEV;
-  window.gtag("config", id, {
-    send_page_view: false, // we send page_view manually on route change
-    anonymize_ip: true,
-    ...(isDev && { debug_mode: true }), // see events in GA4 → Admin → DebugView
-  });
 }
 
 /** Send a page view. Call on initial load and on every route change. */
