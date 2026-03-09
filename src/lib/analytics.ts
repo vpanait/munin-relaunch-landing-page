@@ -1,11 +1,10 @@
 /**
  * Google Analytics 4 (GA4) integration.
- * Tracks page views and button clicks. Campaign traffic is attributed automatically via UTM params.
+ * Script and initial config are loaded in index.html; this file only sends events.
+ * Tracks page views and button clicks. Campaign traffic is attributed via UTM params.
  */
 
 import { GA_MEASUREMENT_ID } from "@/const";
-
-const MEASUREMENT_ID = GA_MEASUREMENT_ID as string | undefined;
 
 declare global {
   interface Window {
@@ -15,34 +14,15 @@ declare global {
 }
 
 function getMeasurementId(): string | null {
-  return MEASUREMENT_ID?.trim() || null;
+  return GA_MEASUREMENT_ID?.trim() || null;
 }
 
-/** Load gtag script and initialize GA4. Call once on app load. */
+/** No-op: script is loaded in index.html. Optionally enables debug_mode in dev. */
 export function initAnalytics(): void {
   const id = getMeasurementId();
-  if (!id) return;
+  if (!id || !window.gtag) return;
 
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = (...args: unknown[]) => {
-    window.dataLayer?.push(args);
-  };
-  window.gtag("js", new Date().toISOString());
-
-  const isDev = import.meta.env.DEV;
-  const config: Record<string, unknown> = {
-    anonymize_ip: true,
-    ...(isDev && { debug_mode: true }),
-  };
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-  // Config runs after script loads so GA gets a page_view and Realtime shows users
-  script.onload = () => {
-    window.gtag?.("config", id, { ...config, send_page_view: true });
-  };
-  document.head.appendChild(script);
+  // window.gtag("config", id, { debug_mode: true });
 }
 
 /** Send a page view. Call on initial load and on every route change. */

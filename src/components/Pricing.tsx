@@ -133,7 +133,7 @@ export const Pricing = () => {
                 className="w-full rounded-full"
               >
                 {plan.cta === "Contact us" ? (
-                  <a href={`mailto:${CONTACT_EMAIL}&subject=Munin AI Enterprise Pricing Inquiry`} target="_blank" rel="noopener noreferrer" onClick={() => trackClick("Contact us", `pricing_${plan.name}`)}>
+                  <a href={`mailto:${CONTACT_EMAIL}?subject=Munin AI Enterprise Pricing Inquiry`} target="_blank" rel="noopener noreferrer" onClick={() => trackClick("Contact us", `pricing_${plan.name}`)}>
                     {plan.cta}
                   </a>
                 ) : (
