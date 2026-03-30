@@ -46,7 +46,7 @@ export const HowWeProtectDocuments = () => {
           className="text-center mb-14"
         >
           <h2 className="text-3xl lg:text-5xl font-serif font-bold tracking-tight">
-            How We Protect Your Documents
+            How We Protect Your Data
           </h2>
         </motion.div>
 
