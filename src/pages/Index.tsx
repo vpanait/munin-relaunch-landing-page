@@ -7,9 +7,6 @@ import { Pricing } from "@/components/Pricing";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
-import { HowWeProtectDocuments } from "@/components/HowWeProtectDocuments";
-import { PrivacyDataHandling } from "@/components/PrivacyDataHandling";
-import { ComplianceRoadmap } from "@/components/ComplianceRoadmap";
 
 const Index = () => {
   return (
@@ -22,9 +19,6 @@ const Index = () => {
         <Features />
         <Pricing />
         <FAQ />
-        <HowWeProtectDocuments />
-        <PrivacyDataHandling />
-        <ComplianceRoadmap />
         <FinalCTA />
       </main>
       <Footer />

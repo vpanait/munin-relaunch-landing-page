@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Disclosures from "./pages/Disclosures";
+import SecurityAndCompliance from "./pages/SecurityAndCompliance";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,11 @@ function AnalyticsTracker() {
 
   useEffect(() => {
     trackPageView(location.pathname || "/", document.title);
+    // UX: reset scroll position on every route change (e.g. footer links).
+    // This prevents landing pages from showing as "scrolled" after navigation.
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    });
   }, [location.pathname]);
 
   return null;
@@ -43,6 +49,7 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/disclosures" element={<Disclosures />} />
+          <Route path="/security-and-compliance" element={<SecurityAndCompliance />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -13,6 +13,12 @@ export const Footer = () => {
             Terms of Service
           </Link>
           <span className="text-muted-foreground">·</span>
+          <Link
+            to="/security-and-compliance"
+            className="hover:underline"
+          >
+            Security & Compliance
+          </Link>
         </div>
         <p className="text-center text-muted-foreground text-sm mt-6">
           &copy; {new Date().getFullYear()} Munin AI. All rights reserved.
